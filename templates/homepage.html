@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='shortcut.png') }}">
+
+    <style>
+
+        p {
+            font-family: verdana, sans-serif;
+        }
+
+        p.border{
+            border-style: none none solid none;
+            border-color: #97B7D7;
+            font-size: 40px;
+            margin: auto;
+        }
+
+        input[type="button"]
+        {
+         background-color:none;
+         width:120px;
+         height:50px;
+         margin:20px;
+         font-size:17px;
+         color:white;
+         border:none;
+        }
+
+        .simple
+        {
+             background-color:green;
+             border: 1px solid green;
+             transition: all 0.35s ease;
+             border-radius:5px;
+             text-align: center;
+        }
+        .simple:hover
+        {
+         border: 1px solid green;
+         background-color:white;
+         color:green;
+        }
+
+        .center {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+    </style>
+
+    <head>
+        <title>The PHifTH Portfolio</title>
+    </head>
+
+    <body>
+        <p class="border" align="center">The PHifTH Portfolio</p><br>
+
+        <div class="center" style="background-color:#CECCCB">
+            <div style="text-align: center;">
+                <img src="{{url_for('static', filename='hawkeye.png')}}" class="center"/>
+            </div>
+
+            <input type="button" class="simple" value="button 1">
+
+            <div class="commentbox"></div>
+            <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+            <script>commentBox('5718698161602560-proj')</script>
+        </div>
+
+    </body>
+
+
+</html>
