@@ -3,7 +3,7 @@ import flask
 
 app = flask.Flask(__name__)
 
-@app.route('/homepage.html', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def index():
     message = ''
     if flask.request.method == 'POST':
