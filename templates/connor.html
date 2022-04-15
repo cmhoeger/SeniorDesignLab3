@@ -1,0 +1,83 @@
+{%extends "layout.html"%}
+
+{%block content%}
+    
+    <div >
+        <style>        
+        p.ext1{
+            padding-right: 35%;
+            background-color: darkgrey;
+        }
+        p.ext2{
+            padding-right: 35%;
+            padding-bottom: 10%;
+            background-color: darkgrey;
+        }
+
+        </style>
+
+        <p class="border">Connor Hoeger's Page</p><br>
+        <br>
+
+        <div class="this">
+            <p class="h2">
+                Welcome!
+            </p>
+            <p class="ext1">
+                Hello! My name is Connor Hoeger and welcome to my portfolio. I am senior currently persuing a degeree in Computer Science and Engineering 
+                major at the university of Iowa with a minor in mathmatics. I am expecting to graduate in December of 2022.
+            </p>
+        </div>
+        <div class="this">
+            <p class ="h4">Interesting Projects</p>
+            <p class="ext1">At the university of Iowa, many of my classes give us projects to practice the concepts disscussed in lecture.
+                This makes sure students are exposed to the design process even if they do not get an internship opportunity.
+                Some of my favorite projects include:</p>
+            <ul>
+                <li>
+                    <h6>Programming Language Concepts</h6>
+                    <ul>
+                        <p class="ext1">
+                            We created a small language using the programming language Haskell.
+                            We needed to make a parser that would recive a program and translate it into instructions.
+                            We also created an evaluatation that would evaluate those instructions and print it out to a file.
+                            It was quite difficult becuase it required us to be very familiar with concepts such as monads and parsers in Haskell.
+                        </p>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <h6>Embeded Systems</h6>
+                    <ul>
+                        <p class="ext1">
+                            Using an Arduino, we created a device that could dim two LEDs by twisting a rotary pulse generator(or RPG for short). 
+                            By using a square wave function generator on the Arduino, we would allow current to flow through a mosfet or not. When the function was high the mosfet would open.
+                            Depending on how long the mosfet was open determined how bright the LEDs would shine. The RPG would modify the duty cicle of the wave.
+                            The button would toggle the LEDs on and off. The LCD screen was there to show the user what the DC was and if the LEDs were suppost to be on or off.
+                        <br>
+                        </p>
+                        <img src="{{url_for('static', filename='Connor\'sProject.jpg')}}" class="center"/>
+                    </ul>
+                </li>
+                <li>
+                    <h6>Prin of Electrical and Compr Eng Design</h6>
+                    <ul>
+                        <p class="ext2">
+                            Our very first lab in this class called on us to create a box that had a screen that told the user the temperature. 
+                            it had to have software that could be run on a computer to graph it and control the screen on the device. My portion of this project was the graphing software.
+                            I opted to use Python since I am quite comfortable with language.
+                            I used a matplotlib graph embeded in a tkinter GUI. The matplotlib graph was there to graph the data continouslly while the temperature sensor sent the data.
+                            The tkinter GUI was there so I could give the user the option to change the temperature units and send commands back to the Arduino.
+                        </p>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>  
+
+
+
+{% endblock %}
+
+
+
