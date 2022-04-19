@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
 
-    <link rel="shortcut icon" href="{{ url_for('static', filename='shortcut.png') }}">
+<html lang="en">
 
     <style>
 
@@ -14,32 +13,6 @@
             border-color: #97B7D7;
             font-size: 40px;
             margin: auto;
-        }
-
-        input[type="button"]
-        {
-         background-color:none;
-         width:120px;
-         height:50px;
-         margin:20px;
-         font-size:17px;
-         color:white;
-         border:none;
-        }
-
-        .simple
-        {
-             background-color:green;
-             border: 1px solid green;
-             transition: all 0.35s ease;
-             border-radius:5px;
-             text-align: center;
-        }
-        .simple:hover
-        {
-         border: 1px solid green;
-         background-color:white;
-         color:green;
         }
 
         .center {
@@ -60,12 +33,13 @@
             <div style="text-align: center;">
                 <img src="{{url_for('static', filename='hawkeye.png')}}" class="center"/>
             </div>
+            
+            <p style="text-align: center;"><a href="{{ url_for('team_intro') }}">Our Team</a></p><br>
+            <p style="text-align: center;"><a href="{{ url_for('connor') }}">Connor's Portfolio</a></p><br>
+            <p style="text-align: center;"><a href="{{ url_for('joey') }}">Joey's Portfolio</a></p><br>
+            <p style="text-align: center;"><a href="{{ url_for('brianna') }}">Brianna's Portfolio</a></p><br>
+            <p style="text-align: center;"><a href="{{ url_for('jt') }}">JT's Portfolio</a></p><br>
 
-            <input type="button" class="simple" value="button 1">
-
-            <div class="commentbox"></div>
-            <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
-            <script>commentBox('5718698161602560-proj')</script>
         </div>
 
     </body>

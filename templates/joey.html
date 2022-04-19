@@ -1,7 +1,52 @@
 {%extends "layout.html"%}
 
 {%block content%}
-    <p class="border">Connor Hoeger's Page</p><br>
+    <style>
+        .center {
+            max-width: 3000;
+            margin: 0%;
+            padding: 10px;
+        }
+    </style>
+
+    <p class="border">Joey Parmenter's Page</p><br>
+    <div class="center" style="background-color:#CECCCB">
+        <h2>Welcome!</h2><br>
+        <p>
+            Hi! My name is Joey and I am pursing a degree in Computer Science and Engineering
+            at the University of Iowa. I've had a great experience at the University and I'm 
+            very excited to move forward and start my career when I graduate in December 2022.
+            I am from a small town called Eldridge, Iowa which is North of the Quad Cities. I 
+            have lived in Iowa City since 2018 and I currently live with my girlfriend and our 
+            two rabbits, Bean and Chia. 
+        </p><br>
+
+        <div style="text-align: center;">
+        <img src="{{url_for('static', filename='bean.png')}}"/>
+        <img src="{{url_for('static', filename='chia_bean.png')}}"/>
+        <img src="{{url_for('static', filename='chia.png')}}"/><br><br>
+        </div>
+
+        <p class="ext1">
+            Some things I like to do in my free time are golfing, fishing, and playing Playstation.
+            I also really enjoy travelling and I love to visit National Parks. I just recently got 
+            interested in National Parks but I've been fortunate enough to visit a lot of them in 
+            the past few years. I've visited the Smokey Mountains, Joshua Tree, all of the NPs in 
+            Utah, Yellowstone, Grand Teton, and Pictured Rocks National Lakeshore. 
+        </p><br>
+
+        <div style="text-align: center;">
+        <img src="{{url_for('static', filename='bryceCanyon.png')}}" />
+        <img src="{{url_for('static', filename='yellowStone.png')}}"/>
+        <img src="{{url_for('static', filename='teton.png')}}"/>
+        <img src="{{url_for('static', filename='sanDiego.png')}}" /> <br>
+    </div>
+    
+    <br><p style="text-align: center;"><a href="{{ url_for('brianna') }}">Read about Brianna next!</a></p><br>
+
+    <div class="commentbox"></div>
+    <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+    <script>commentBox('5728304627712000-proj')</script>
 
 
 {% endblock %}

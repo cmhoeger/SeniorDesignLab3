@@ -8,6 +8,7 @@ def index():
     message = ''
     if flask.request.method == 'POST':
         message = 'Hello ' + flask.request.form['name-input'] + '!'
+
     return flask.render_template('homePage.html', message=message)
 
 @app.route('/connor.html')
@@ -31,4 +32,5 @@ def team_intro():
     return flask.render_template('team_intro.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug = True)
+

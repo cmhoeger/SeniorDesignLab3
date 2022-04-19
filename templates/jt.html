@@ -3,5 +3,10 @@
 {%block content%}
     <p class="border">Connor Hoeger's Page</p><br>
 
+    <br><p style="text-align: center;"><a href="{{ url_for('team_intro') }}">Read about our Team!</a></p><br>
+
+    <div class="commentbox"></div>
+    <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+    <script>commentBox('5726679016144896-proj')</script>
 
 {% endblock %}
