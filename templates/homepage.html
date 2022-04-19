@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+{%extends "layout.html"%}
+
+{%block content%}
 
 <html lang="en">
 
@@ -8,7 +11,7 @@
             font-family: verdana, sans-serif;
         }
 
-        p.border{
+        p.border1{
             border-style: none none solid none;
             border-color: #97B7D7;
             font-size: 40px;
@@ -16,7 +19,7 @@
         }
 
         .center {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: auto;
         }
 
@@ -27,10 +30,10 @@
     </head>
 
     <body>
-        <p class="border" align="center">The PHifTH Portfolio</p><br>
+        <p class="border1" align="center">The PHifTH Portfolio</p><br>
 
         <div class="center" style="background-color:#CECCCB">
-            <div style="text-align: center;">
+            <br><div style="text-align: center;">
                 <img src="{{url_for('static', filename='hawkeye.png')}}" class="center"/>
             </div>
             
@@ -44,5 +47,6 @@
 
     </body>
 
+    {% endblock %}
 
 </html>
