@@ -1,7 +1,15 @@
 {%extends "layout.html"%}
 
 {%block content%}
-    <p class="border">Connor Hoeger's Page</p><br>
+    <head>
+        <title>Our Team</title>
+    </head>
+    <p class="border2">Our Team</p><br>
 
+    <p style="text-align: center;"><a href="{{ url_for('connor') }}">Read about Connor next!</a></p><br>
+
+    <div class="commentbox"></div>
+    <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+    <script>commentBox('5659788356616192-proj')</script>
 
 {% endblock %}
