@@ -7,17 +7,6 @@
 
     <style>
 
-        p {
-            font-family: verdana, sans-serif;
-        }
-
-        p.border1{
-            border-style: none none solid none;
-            border-color: #97B7D7;
-            font-size: 40px;
-            margin: auto;
-        }
-
         .center {
             max-width: 1000px;
             margin: auto;
@@ -30,12 +19,10 @@
     </head>
 
     <body>
-        <p class="border1" align="center">The PHifTH Portfolio</p><br>
-
         <div class="center" style="background-color:#CECCCB">
             <br><div style="text-align: center;">
                 <img src="{{url_for('static', filename='hawkeye.png')}}" class="center"/>
-            </div>
+            </div><br>
             
             <p style="text-align: center;"><a href="{{ url_for('team_intro') }}">Our Team</a></p><br>
             <p style="text-align: center;"><a href="{{ url_for('connor') }}">Connor's Portfolio</a></p><br>
