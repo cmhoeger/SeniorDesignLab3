@@ -1,35 +1,45 @@
 
-import flask
+from flask import *
 
-app = flask.Flask(__name__)
+app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
     message = ''
-    if flask.request.method == 'POST':
-        message = 'Hello ' + flask.request.form['name-input'] + '!'
+    if request.method == 'POST':
+        source = str(request.form['button'])
+        if source == "Our Team":
+            return redirect(url_for('team_intro'))
+        elif source == "Connor's Portfolio":
+            return redirect(url_for('connor'))
+        elif source == "Joey's Portfolio":
+            return redirect(url_for('joey'))
+        elif source == "Brianna's Portfolio":
+            return redirect(url_for('brianna'))
+        elif source == "JT's Portfolio":
+            return redirect(url_for('jt'))
 
-    return flask.render_template('homePage.html', message=message)
+    return render_template('homePage.html', message=message)
 
-@app.route('/connor.html')
+@app.route('/connor')
 def connor():
-    return flask.render_template('connor.html')
+    return render_template('connor.html')
 
-@app.route('/jt.html')
+@app.route('/jt')
 def jt():
-    return flask.render_template('jt.html')
+    return render_template('jt.html')
 
-@app.route('/brianna.html')
+@app.route('/brianna')
 def brianna():
-    return flask.render_template('brianna.html')
+    return render_template('brianna.html')
 
-@app.route('/joey.html')
+@app.route('/joey')
 def joey():
-    return flask.render_template('joey.html')
+    return render_template('joey.html')
 
-@app.route('/team_intro.html')
+@app.route('/team_intro')
 def team_intro():
-    return flask.render_template('team_intro.html')
+    return render_template('team_intro.html')
 
 if __name__ == '__main__':
     app.run(debug = True)
