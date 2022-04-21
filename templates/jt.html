@@ -1,12 +1,28 @@
 {%extends "layout.html"%}
 
 {%block content%}
-    <p class="border">Connor Hoeger's Page</p><br>
-
+<style>
+        .center {
+            max-width: 3000;
+            margin: 0%;
+            padding: 10px;
+        }
+    </style>
+    \
     <head>
         <title>JT's Portfolio</title>
     </head>
+
+    <div class="center" style="background-color:#dec8ab">
     <p class="border2">Welcome to JT's porfolio page!</p><br>
+         <p>
+            Hello I'm JT AKA Josua Theodore and I'm a 4th year Electrical Engineer at U of I. I was born in Bettendorf
+            in the QuadCities but I haven't lived there for aorund 12 years. Up until now I was livung in Heidelberg
+            Germany from 2010 to 2013 and then in Wiesbaden Germany from 2013 till the December of 2021. My parents worked
+            fro the government so because of that I got to move around a lot when I was younger. My mom comes from Printess
+            Mississippi and my dad comes from Athens Greece. I can speak English and Greek pretty well and I kind of know some
+            German.
+        </p><br>
 
     <br><p style="text-align: center;"><a href="{{ url_for('team_intro') }}">Read about our Team!</a></p><br>
 
