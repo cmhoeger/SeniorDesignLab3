@@ -4,12 +4,63 @@
     <head>
         <title>Brianna's Portfolio</title>
     </head>
-    <p class="border2">Welcome to Brianna's porfolio page!</p><br>
+    <h3 style="background-color:#397c86; padding: 0.5em; color:white; font-family: 'Trebuchet MS' "> Welcome to Brianna's portfolio page!</h3><br>
+    <div>
+        <p style="padding-right: 2em">
+            <img src="{{url_for('static', filename='art.png')}}" style="display: inline; margin-left: 2em" align="right" border="0" alt="img"/>
+        </p>
+        <h5 style=" font-family: 'Trebuchet MS'; margin-left: 0.75em">
+            <mark style="background-color: #fd9871; color: white">  About Me  </mark>
+        </h5>
 
-    
-    <p style="text-align: center;"><a href="{{ url_for('jt') }}">Read about JT next!</a></p><br>
+        <p style="color: #397c86; padding-left: 2.5em; padding-right: 2.5em; padding-top: 0.5em; text-indent: 2em; text-align: justify; font-family: 'Trebuchet MS'">
+            Hello! My name is Brianna and I am a third year student at the University of Iowa pursing a degree
+            in Computer Science & Engineering and a minor in Cinema. I grew up as a Wildcat in the small town of
+            Durant not far from here with my parents, younger sister, and cats.
+            Now, as a Hawkeye, I get to experience a broader, more diverse learning community far beyond my
+            small-town origins. The skills I've developed at the University of Iowa have given me the opportunity
+            to share what I've learned with others as a coding instructor through my internship with a non-profit
+            called <a href="https://the-cs.org" target="_blank">The Coding School</a>.
+            Outside of school and work, my interests & hobbies include reading, drawing, painting, and music.
+        </p> <br> <br>
 
-    <div class="commentbox"></div>
-    <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
-    <script>commentBox('5709428917534720-proj')</script>
+        <h5 style=" font-family: 'Trebuchet MS'; margin-left: 0.75em">
+            <mark style="background-color: #fd9871; color: white">  My Cats  </mark>
+        </h5> <br>
+
+        <p style="padding-right: 2em">
+            <img src="{{url_for('static', filename='cat1.png')}}" style="display: inline; margin-left: 2em; border: 8px solid #397c86" align="left" alt="img"/>
+        </p> <br> <br> <br>
+
+        <p style="color: white; background-color: #fd9871; margin-left: 18em; margin-right: 25em; padding-left: 1em; padding-right: 1.5em; padding-top: 1em; padding-bottom: 1em; text-align: justify; font-family: 'Trebuchet MS'">
+            This is <strong>Black Kitty</strong>, she has been around longer than my own sister! Her actual name
+            on her records is Panthera, but she doesn't like it. She likes to take naps, sit on laps, and avoid
+            the boys.
+        </p> <br> <br> <br> <br>
+
+        <p style="padding-right: 2em">
+            <img src="{{url_for('static', filename='pronce.png')}}" style="display: inline; margin-left: 2em; border: 8px solid #397c86" align="left" alt="img"/>
+        </p> <br> <br> <br>
+
+        <p style="color: white; background-color: #fd9871; margin-left: 18em; margin-right: 25em; padding-left: 1em; padding-right: 1.5em; padding-top: 1em; padding-bottom: 1em; text-align: justify; font-family: 'Trebuchet MS'">
+            This is <strong>Prince</strong>, he is a 2.5 year old bengal. Don't let that adorable face fool you,
+            he can be cunning & vicious! Prince likes to sniff butts and wreak havoc whenever and wherever he can.
+        </p> <br> <br> <br> <br>
+
+        <p style="padding-right: 2em">
+            <img src="{{url_for('static', filename='charlie.png')}}" style="display: inline; margin-left: 2em; border: 8px solid #397c86" align="left" alt="img"/>
+        </p> <br> <br>
+
+        <p style="color: white; background-color: #fd9871; margin-left: 18em; margin-right: 25em; padding-left: 1em; padding-right: 1.5em; padding-top: 1em; padding-bottom: 1em; text-align: justify; font-family: 'Trebuchet MS'">
+            This chonky boi is <strong>Charlie</strong> <em>(next to Prince for size comparison)</em>. This absolute unit is
+            almost 2 years old and tipping the scales at 21 lbs! Despite his size, his brain is the smallest of
+            the three cats. The only thought behind those eyes is one of food.
+        </p> <br> <br> <br>
+    </div>
+
+        <p style="text-align: center;"><a href="{{ url_for('jt') }}">Read about JT next!</a></p><br>
+        <div class="commentbox"></div>
+        <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+        <script>commentBox('5709428917534720-proj')</script>
+
 {% endblock %}
