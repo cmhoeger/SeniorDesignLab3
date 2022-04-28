@@ -8,16 +8,68 @@
         .topLeft{
             padding-left: 35px;
         }
+
+        .grid-container{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+            grid-template-areas: 'Joey Connor' 'JT Brianna';
+        }
+        .item1{
+            grid-area: Joey;
+            
+        }
+        .item2{
+            grid-area: Connor;
+        }
+        .item3{
+            grid-area: JT;
+        }
+        .item4{
+            grid-area: Brianna;
+        }
     </style>
     <p class="border2">Our Team</p><br>
-
-    <figure class="center">
-    <img class="topLeft" src="{{url_for('static', filename='joey.png')}}" name="joey"/>
-        <figcaption class="center">Hi, my name is Joey Parmenter and I am a Senior in <br>
-            Computer Science and Engineering at the University <br> of Iowa. Some things 
-            I like to do are hiking, exercising,<br> and playing golf. 
-            <a href= "{{ url_for('team_intro') }}">Read more</a> about me on my page!<br>
-        </figcaption>
-    </figure>
-
+    <div class="grid-container">
+        <div class="item1">
+            <figure class="center">
+            <img class="topLeft" src="{{url_for('static', filename='joey.png')}}" name="joey"/>
+                <figcaption class="center">Hi, my name is Joey Parmenter and I am a Senior in 
+                    Computer Science and Engineering at the University of Iowa. Some things 
+                    I like to do are hiking, exercising, and playing golf. 
+                    <a href= "{{ url_for('joey') }}">Read more</a> about me on my page!
+                </figcaption>
+            </figure>
+        </div>
+        <div class="item2">
+            <figure class="center">
+                <img class="topLeft" src="{{url_for('static', filename='joey.png')}}" name="connor"/>
+                    <figcaption class="center">Hi, my name is Connor Hoeger and my degreee is in
+                        Computer Science and Engineering. I am a senior at at the University of Iowa graduating in december 2022.
+                        I find Software engineering very rewarding and computer hardware interesting.
+                        <a href= "{{ url_for('connor') }}">Read more</a> about me on my page!
+                    </figcaption>
+            </figure>
+        </div>
+        <div class="item3">
+            <figure class="center">
+                <img class="topLeft" src="{{url_for('static', filename='joey.png')}}" name="JT"/>
+                    <figcaption class="center">Hi, my name is Joey Parmenter and I am a Senior in 
+                        Computer Science and Engineering at the University of Iowa. Some things 
+                        I like to do are hiking, exercising, and playing golf. 
+                        <a href= "{{ url_for('jt') }}">Read more</a> about me on my page!
+                    </figcaption>
+            </figure>
+        </div>
+        <div class="item4">
+            <figure class="center">
+                <img class="topLeft" src="{{url_for('static', filename='joey.png')}}" name="Brianna"/>
+                    <figcaption class="center">Hi, my name is Joey Parmenter and I am a Senior in
+                        Computer Science and Engineering at the University of Iowa. Some things 
+                        I like to do are hiking, exercising, and playing golf. 
+                        <a href= "{{ url_for('brianna') }}">Read more</a> about me on my page!
+                    </figcaption>
+            </figure>
+        </div>
+    </div>
 {% endblock %}
